@@ -68,7 +68,7 @@ ansible-playbook 90.setup.yml # 一步安装
 #ansible-playbook 05.kube-master.yml
 #ansible-playbook 06.kube-node.yml
 # 网络只可选择calico flannel一种安装
-#ansible-playbook 07.calico.yml 
+#ansible-playbook 07.calico.yml
 #ansible-playbook 07.flannel.yml
 ```
 如果执行成功，k8s集群就安装好了。详细分步讲解请查看项目目录 `/docs` 下相关文档
