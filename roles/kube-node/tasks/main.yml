@@ -14,7 +14,7 @@
   - bridge
   - host-local
   - loopback
-  
+
 ##----------kubelet 配置部分--------------
 # kubelet 启动时向 kube-apiserver 发送 TLS bootstrapping 请求，需要绑定该角色
 # 只需单节点执行一次，重复执行的报错可以忽略
@@ -56,7 +56,7 @@
 
 - name: 开启kubelet 服务
   shell: systemctl daemon-reload && systemctl enable kubelet && systemctl restart kubelet
-  tags: kubelet 
+  tags: kubelet
 
 - name: approve-kubelet-csr
   shell: "sleep 15 && {{ bin_dir }}/kubectl get csr|grep 'Pending' | awk 'NR>0{print $1}'| xargs {{ bin_dir }}/kubectl certificate approve"
@@ -105,4 +105,3 @@
 - name: 开启kube-proxy 服务
   tags: reload-kube-proxy
   shell: systemctl daemon-reload && systemctl enable kube-proxy && systemctl restart kube-proxy
-
