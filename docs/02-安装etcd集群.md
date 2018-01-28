@@ -118,7 +118,6 @@ $ for ip in ${NODE_IPS}; do
 ```
 预期结果：
 
-
 ``` text
 https://192.168.1.1:2379 is healthy: successfully committed proposal: took = 2.210885ms
 https://192.168.1.2:2379 is healthy: successfully committed proposal: took = 2.784043ms
